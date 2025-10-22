@@ -1,0 +1,21 @@
+cluster_name = "non-prod-ebus-eks-blue"
+kubernetes_version = "1.30"
+support_type = "STANDARD"
+cluster_role_arn = "arn:aws:iam::123456789012:role/my-eks-cluster-role"
+subnet_ids = ["subnet-12345678", "subnet-87654321"]
+tags = {
+  Environment = "dev"
+  Cluster_Role = "Share/Dedicated"
+}
+node_role_arn = "arn:aws:iam::123456789012:role/my-eks-node-role"
+desired_size = 2
+max_size = 3
+min_size = 1
+instance_types = ["t3.medium"]
+enabled_cluster_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+vpc_cni_addon_version = "v1.14.1-eksbuild.1"
+ebs_csi_addon_version = "v1.24.0-eksbuild.1"
+kube_proxy_addon_version = "v1.30.4-eksbuild.1"
+vpc_cni_env_namespace = "eks-cni"
+kube_proxy_env_namespace = "eks-kube-proxy"
+ebs_csi_env_namespace = "eks-ebs-csi"
