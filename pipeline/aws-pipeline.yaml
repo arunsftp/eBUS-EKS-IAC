@@ -27,29 +27,39 @@ parameters:
   - name: appServices
     type: object
     default:
-      - applicationServiceID: 'mft-dev-azure'
+      - applicationServiceID: 'eks-eBUS-np-green'
         approvalGate: true
-        approvalEnvName: nonprod_azure # or nonprod_gcp
+        approvalEnvName: nonprod_aws # or nonprod_azure
         changeEnabled: true
         changeNumber: NONE_NEW_ONE_WILL_BE_CREATED
         buildsheetUrl: ''
         virtualMachineJob: true
 
-      - applicationServiceID: 'mft-uat-azure'
+      - applicationServiceID: 'eks-eBUS-np-blue'
         approvalGate: true
-        approvalEnvName: nonprod_azure # or nonprod_gcp
+        approvalEnvName: nonprod_aws # or nonprod_azure
         changeEnabled: true
         changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
         buildsheetUrl: ''
         virtualMachineJob: true
 
-      - applicationServiceID: 'mft-prod-azure'
+      - applicationServiceID: 'eks-eBUS-prod-green'
+        dependsOn: 'eks-eBUS-np-green'
         approvalGate: true
-        approvalEnvName: prod_azure # or nonprod_gcp
+        approvalEnvName: prod_aws # or prod_azure
         changeEnabled: true
         changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
-        buildsheetUrl: 'https://docs.google.com/spreadsheets/d/1YKeH7WGZ1B9RoYKP0TUpgmfOQ3_4_7w4OKE71NQ9IWo/edit#gid=1204723306'
+        buildsheetUrl: 'https://BUILDSHEETURL'
         virtualMachineJob: true  
+
+      - applicationServiceID: 'eks-eBUS-prod-blue'
+        dependsOn: 'eks-eBUS-np-blue'
+        approvalGate: true
+        approvalEnvName: prod_aws # or prod_azure
+        changeEnabled: false
+        changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
+        buildsheetUrl: 'https://BUILDSHEETURL'
+        virtualMachineJob: true
 
 #      - applicationServiceID: '<tla>-prod-<cloud>'
 #        dependsOn: '<tla>-uat-<cloud>'
