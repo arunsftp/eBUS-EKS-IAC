@@ -1,6 +1,6 @@
 
 # Schema can be found here:
-# https://github.com/WoolworthsCORP/AzureDevOps-Blueprints/blob/1.1.0/templates/pipelines/infrastructure/readme.md
+# https://github.com/arunsftp/AzureDevOps-Blueprints/blob/1.1.0/templates/pipelines/infrastructure/readme.md
 
 #################################################
 # Resources
@@ -11,8 +11,8 @@ resources:
     - repository: blueprints
       type: github
       endpoint: 'Github Service Connection'
-      name: WoolworthsCORP/AzureDevOps-Blueprints
-      ref: refs/tags/v1.4.31
+      name: arunsftp/AzureDevOps-Blueprints
+      #ref: refs/tags/v1.4.31
 
 #################################################
 # Triggers
