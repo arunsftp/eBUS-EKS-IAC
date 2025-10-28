@@ -10,7 +10,7 @@ resources:
   repositories:
     - repository: blueprints
       type: github
-      endpoint: 'Github Service Connection'
+      endpoint: 'github.com_arunsftp' # 'Github Service Connection'
       name: arunsftp/AzureDevOps-Blueprints
       #ref: refs/tags/v1.4.31
 
