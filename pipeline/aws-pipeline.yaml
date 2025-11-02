@@ -8,7 +8,7 @@
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/multi-repo-checkout
 resources:
   repositories:
-    - repository: AAzureDevOps-Blueprints
+    - repository: Blueprints
       type: github
       endpoint: 'github.com_arunsftp' # 'Github Service Connection'
       name: arunsftp/AAzureDevOps-Blueprints
