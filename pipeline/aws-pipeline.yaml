@@ -8,7 +8,7 @@
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/multi-repo-checkout
 resources:
   repositories:
-    - repository: blueprints
+    - repository: AAzureDevOps-Blueprints
       type: github
       endpoint: 'github.com_arunsftp' # 'Github Service Connection'
       name: arunsftp/AAzureDevOps-Blueprints
@@ -35,31 +35,31 @@ parameters:
         buildsheetUrl: ''
         virtualMachineJob: true
 
-      - applicationServiceID: 'eks-eBUS-np-blue'
-        approvalGate: true
-        approvalEnvName: nonprod_aws # or nonprod_azure
-        changeEnabled: true
-        changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
-        buildsheetUrl: ''
-        virtualMachineJob: true
+      # - applicationServiceID: 'eks-eBUS-np-blue'
+      #   approvalGate: true
+      #   approvalEnvName: nonprod_aws # or nonprod_azure
+      #   changeEnabled: true
+      #   changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
+      #   buildsheetUrl: ''
+      #   virtualMachineJob: true
 
-      - applicationServiceID: 'eks-eBUS-prod-green'
-        dependsOn: 'eks-eBUS-np-green'
-        approvalGate: true
-        approvalEnvName: prod_aws # or prod_azure
-        changeEnabled: true
-        changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
-        buildsheetUrl: 'https://BUILDSHEETURL'
-        virtualMachineJob: true  
+      # - applicationServiceID: 'eks-eBUS-prod-green'
+      #   dependsOn: 'eks-eBUS-np-green'
+      #   approvalGate: true
+      #   approvalEnvName: prod_aws # or prod_azure
+      #   changeEnabled: true
+      #   changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
+      #   buildsheetUrl: 'https://BUILDSHEETURL'
+      #   virtualMachineJob: true  
 
-      - applicationServiceID: 'eks-eBUS-prod-blue'
-        dependsOn: 'eks-eBUS-np-blue'
-        approvalGate: true
-        approvalEnvName: prod_aws # or prod_azure
-        changeEnabled: false
-        changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
-        buildsheetUrl: 'https://BUILDSHEETURL'
-        virtualMachineJob: true
+      # - applicationServiceID: 'eks-eBUS-prod-blue'
+      #   dependsOn: 'eks-eBUS-np-blue'
+      #   approvalGate: true
+      #   approvalEnvName: prod_aws # or prod_azure
+      #   changeEnabled: false
+      #   changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
+      #   buildsheetUrl: 'https://BUILDSHEETURL'
+      #   virtualMachineJob: true
 
 #      - applicationServiceID: '<tla>-prod-<cloud>'
 #        dependsOn: '<tla>-uat-<cloud>'
