@@ -76,9 +76,9 @@ parameters:
 extends:
   template: template/stages/tfe/deploy-appsvcs.yml@blueprints #templates/stages/tfe/deploy-appsvcs.yml@blueprints
   parameters:
-   workingDirectory : infrastructure/terraform
-   environment : dev
-   serviceConnection : github.com_arunsftp
+  #  workingDirectory : infrastructure/terraform
+  #  environment : dev
+  #  serviceConnection : github.com_arunsftp
     # appServices:  ${{ parameters.appServices }}
     # Uncomment in Sandpit
     # windowsAgentPool: Enterprise
