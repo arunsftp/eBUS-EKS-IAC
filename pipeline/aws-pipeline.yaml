@@ -74,7 +74,7 @@ parameters:
 # Job Definition
 #################################################
 extends:
-  template: templates/stages/tfe/deploy-appsvcs.yml@blueprints #templates/stages/tfe/deploy-appsvcs.yml@blueprints
+  template: template/stages/tfe/deploy-appsvcs.yml@blueprints #templates/stages/tfe/deploy-appsvcs.yml@blueprints
   parameters:
    workingDirectory : infrastructure/terraform
    environment : dev
