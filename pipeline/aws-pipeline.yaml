@@ -27,7 +27,7 @@ parameters:
   - name: appServices
     type: object
     default:
-      - applicationServiceID: 'eks-eBUS-dev-np-green'
+      - applicationServiceID: 'eks_eBUS_dev_np_green'
         approvalGate: true
         approvalEnvName: nonprod_aws # or nonprod_azure
         changeEnabled: true
