@@ -77,6 +77,7 @@ extends:
   template: template/stages/tfe/deploy-appsvcs.yml@blueprints #templates/stages/tfe/deploy-appsvcs.yml@blueprints
   parameters:
      appServices:  ${{ parameters.appServices }}
+     manualValidation: false
     # Uncomment in Sandpit
     # windowsAgentPool: Enterprise
      linuxAgentPool: azd-shared-rhel
