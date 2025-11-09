@@ -79,4 +79,4 @@ extends:
      appServices:  ${{ parameters.appServices }}
     # Uncomment in Sandpit
     # windowsAgentPool: Enterprise
-     linuxAgentPool:  Hosted Agent #azd-shared-rhel
+     linuxAgentPool:  Azure Pipeline #azd-shared-rhel
