@@ -35,13 +35,13 @@ parameters:
         buildsheetUrl: ''
         virtualMachineJob: true
 
-      # - applicationServiceID: 'eks-eBUS-np-blue'
-      #   approvalGate: true
-      #   approvalEnvName: nonprod_aws # or nonprod_azure
-      #   changeEnabled: true
-      #   changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
-      #   buildsheetUrl: ''
-      #   virtualMachineJob: true
+      - applicationServiceID: 'eks-eBUS-np-blue'
+        approvalGate: true
+        approvalEnvName: nonprod_aws # or nonprod_azure
+        changeEnabled: true
+        changeNumber: 'NONE_NEW_ONE_WILL_BE_CREATED'
+        buildsheetUrl: ''
+        virtualMachineJob: true
 
       # - applicationServiceID: 'eks-eBUS-prod-green'
       #   dependsOn: 'eks-eBUS-np-green'
